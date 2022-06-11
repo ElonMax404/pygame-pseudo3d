@@ -7,3 +7,4 @@ player_pos = (HALF_WIDTH, HALF_HEIGHT)
 player_angle = 0
 player_speed = 2
 FPS = 60
+TILE = 100
