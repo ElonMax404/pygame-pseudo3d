@@ -1,6 +1,7 @@
 import pygame
 from config import *
 from player import Player
+import math
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -18,6 +19,8 @@ def main():
         screen.fill(pygame.Color("Black"))
 
         pygame.draw.circle(screen, pygame.Color("Green"), player.pos, 12)
+        pygame.draw.line(screen, pygame.Color("Green"), player.pos, (player.x + 300 * math.cos(player.angle),
+                                                                     player.y + 300 * math.sin(player.angle)))
 
         pygame.display.update()
         clock.tick(FPS)
