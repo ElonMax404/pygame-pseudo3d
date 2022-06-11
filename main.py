@@ -20,9 +20,10 @@ def main():
         player.movement()
         screen.fill(pygame.Color("Black"))
 
-        pygame.draw.circle(screen, pygame.Color("Green"), player.pos, 12)
-        pygame.draw.line(screen, pygame.Color("Green"), player.pos, (player.x + 300 * math.cos(player.angle),
-                                                                     player.y + 300 * math.sin(player.angle)))
+        pygame.draw.circle(screen, pygame.Color("Green"), (int(player.x), int(player.y)), 12)
+        pygame.draw.line(screen, pygame.Color("Green"), (int(player.x), int(player.y)),
+                         (player.x + 300 * math.cos(player.angle),
+                          player.y + 300 * math.sin(player.angle)))
         for x, y in world_map:
             pygame.draw.rect(screen, pygame.Color("Grey"), (x, y, TILE, TILE), 2)
 
