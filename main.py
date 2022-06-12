@@ -3,6 +3,7 @@ from config import *
 from player import Player
 import math
 from map import world_map
+from raycasting import ray_casting
 
 pygame.init()
 pygame.display.set_caption("Pseudo 3d")
@@ -20,10 +21,10 @@ def main():
         player.movement()
         screen.fill(pygame.Color("Black"))
 
+        ray_casting(screen, (player.x, player.y), player.angle)
+
         pygame.draw.circle(screen, pygame.Color("Green"), (int(player.x), int(player.y)), 12)
-        pygame.draw.line(screen, pygame.Color("Green"), (int(player.x), int(player.y)),
-                         (player.x + 300 * math.cos(player.angle),
-                          player.y + 300 * math.sin(player.angle)))
+
         for x, y in world_map:
             pygame.draw.rect(screen, pygame.Color("Grey"), (x, y, TILE, TILE), 2)
 
