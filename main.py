@@ -21,13 +21,10 @@ def main():
         player.movement()
         screen.fill(pygame.Color("Black"))
 
+        pygame.draw.rect(screen, pygame.Color("Blue"), (0, 0, WIDTH, HALF_HEIGHT))
+        pygame.draw.rect(screen, pygame.Color("Yellow"), (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
+
         ray_casting(screen, (player.x, player.y), player.angle)
-
-        pygame.draw.circle(screen, pygame.Color("Green"), (int(player.x), int(player.y)), 12)
-
-        for x, y in world_map:
-            pygame.draw.rect(screen, pygame.Color("Grey"), (x, y, TILE, TILE), 2)
-
 
         pygame.display.update()
         clock.tick(FPS)
