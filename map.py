@@ -3,10 +3,10 @@ from config import *
 text_map = [
     'WWWWWWWWWWWW',
     'W....WWW...W',
-    'W..........W',
-    'W.W......WWW',
-    'W..........W',
-    'WWW.....WW.W',
+    'W..W.....W.W',
+    'W.WW....WW.W',
+    'W.W.....W..W',
+    'W.WW....WW.W',
     'W..........W',
     'WWWWWWWWWWWW',
 ]
